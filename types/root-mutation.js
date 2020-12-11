@@ -4,14 +4,15 @@ const {
   GraphQLString,
   GraphQLNonNull,
 } = require('graphql');
-const { books } = require('../database');
-const { BookType } = require('./book-author');
+const { books,authors } = require('../database');
+const { BookType,AuthorType } = require('./book-author');
 
 const RootMutationType = new GraphQLObjectType({
   name: 'Mutation',
   description: 'This is the root Mutation',
   fields: () => ({
     addBook: {
+      //type of return value
       type: BookType,
       description: 'Add a book',
       args: {
@@ -28,6 +29,22 @@ const RootMutationType = new GraphQLObjectType({
         return book;
       },
     },
+    addAuthor: {
+        //type of return value
+        type: AuthorType,
+        description: 'Add an author',
+        args: {
+          name: { type: GraphQLNonNull(GraphQLString) },
+        },
+        resolve: (_, args) => {
+          const author = {
+            id: authors.length + 1,
+            name: args.name,
+          };
+          authors.push(author);
+          return author;
+        },
+      },
   }),
 });
 

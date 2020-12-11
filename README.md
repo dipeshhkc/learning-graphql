@@ -60,3 +60,13 @@ query{
   }
 }
 ```
+
+```
+//adding book with return value
+mutation{
+  addBook(name:"book10",author:2) {
+    id
+    name
+  } 
+}
+```
