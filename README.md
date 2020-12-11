@@ -13,6 +13,7 @@ yarn dev
 #### Examples
 
 ```
+//get all books with their authors
 query{
   books{
     id
@@ -26,6 +27,7 @@ query{
 ```
 
 ```
+//get all authors with their books
 query{
   authors {
     id
@@ -40,6 +42,7 @@ query{
 ```
 
 ```
+//get single book with id
 query{
   book(id:1) {
     id
@@ -49,6 +52,7 @@ query{
 ```
 
 ```
+//get single author with id
 query{
   author(id:1) {
     id
