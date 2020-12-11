@@ -22,4 +22,28 @@ query{
       name
     }
   }
-}```
+}
+```
+
+```
+query{
+  authors {
+    id
+    name
+    books {
+      id
+      name
+    }
+    
+  }
+}
+```
+
+```
+query{
+  book(id:1) {
+    id
+    name
+  }
+}
+```
