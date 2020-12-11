@@ -7,3 +7,5 @@ yarn install
 yarn dev
 
 ```
+
+#### Note: You can visit `/graphql` endpoint for documentation and quering different entities.
