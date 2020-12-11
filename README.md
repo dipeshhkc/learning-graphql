@@ -70,3 +70,14 @@ mutation{
   } 
 }
 ```
+
+```
+//adding author with return value
+
+mutation{
+  addAuthor(name:"Author10") {
+    id
+    name
+  } 
+}
+```
