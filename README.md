@@ -47,3 +47,12 @@ query{
   }
 }
 ```
+
+```
+query{
+  author(id:1) {
+    id
+    name
+  }
+}
+```
